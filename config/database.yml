@@ -74,12 +74,12 @@ test:
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
+
+  production:
+    url: <%= ENV['DATABASE_URL'] %>
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-  <<: *default
-  database: DiaLogBook_production
-  username: DiaLogBook
-  password: <%= ENV['DIALOGBOOK_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: DiaLogBook_production
+#   username: DiaLogBook
+#   password: <%= ENV['DIALOGBOOK_DATABASE_PASSWORD'] %>
